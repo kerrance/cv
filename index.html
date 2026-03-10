@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Kerri Sharp's CV</title>
@@ -39,26 +39,14 @@
         font-family: Arial, sans-serif;
         color: var(--color__black);
         line-height: 1.4;
-        padding: 4rem 2rem;
       }
 
-      @media only screen and (min-width: 512px) {
+      @media only screen {
         body {
-          padding: 6vh 12vw;
           max-width: 48rem;
+          padding: 4rem 2rem;
+          margin: 0 auto;
         }
-      }
-
-      @media only screen and (min-width: 1024px) {
-        body {
-          padding: 10vh 24vw;
-        }
-      }
-
-      header,
-      section,
-      p {
-        margin-bottom: 1rem;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -66,6 +54,12 @@
           background-color: var(--color__black);
           color: white;
         }
+      }
+
+      header,
+      section,
+      p {
+        margin-bottom: 1rem;
       }
 
       ::selection {
