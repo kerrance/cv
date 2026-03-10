@@ -14,17 +14,129 @@
     <meta property="og:title" content="Kerri Sharp's CV" />
     <meta property="og:description" content="This is my CV where you can find out more about my career and skills" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.kerrisharp.com/cv" />
-    <meta property="og:image" content="https://www.kerrisharp.com/meta.jpg" />
+    <meta property="og:url" content="https://www.kerrisharp.cv/cv" />
+    <meta property="og:image" content="https://www.kerrisharp.cv/meta.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Kerri Sharp's CV" />
     <meta name="twitter:description" content="This is my CV where you can find out more about my career and skills" />
-    <meta name="twitter:image" content="https://www.kerrisharp.com/meta.jpg" />
+    <meta name="twitter:image" content="https://www.kerrisharp.cv/meta.jpg" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="aesthetic.css" rel="stylesheet" />
-    <link href="paper.css" rel="stylesheet" />
-
     <style>
+      :root {
+        --color__yellow: #f2c311;
+        --color__black: #121110;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        font-size: 1.2rem;
+        font-family: Arial, sans-serif;
+        color: var(--color__black);
+        line-height: 1.4;
+        padding: 4rem 2rem;
+      }
+
+      @media only screen and (min-width: 512px) {
+        body {
+          padding: 6vh 12vw;
+          max-width: 48rem;
+        }
+      }
+
+      @media only screen and (min-width: 1024px) {
+        body {
+          padding: 10vh 24vw;
+        }
+      }
+
+      header,
+      section,
+      p {
+        margin-bottom: 1rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: var(--color__black);
+          color: white;
+        }
+      }
+
+      ::selection {
+        background-color: var(--color__yellow);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        ::selection {
+          color: var(--color__black);
+        }
+      }
+
+      a:link,
+      a:active,
+      a:hover,
+      a:visited {
+        color: var(--color__black);
+        text-decoration: underline var(--color__black) 0.1rem;
+        text-underline-offset: 0.2rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a:link,
+        a:active,
+        a:hover,
+        a:visited {
+          color: white;
+          text-decoration: underline white 0.1rem;
+          text-underline-offset: 0.2rem;
+        }
+      }
+
+      a:focus {
+        outline: var(--color__yellow) auto 2px;
+        outline-style: solid;
+        outline-offset: 0.1rem;
+        text-decoration: none;
+      }
+
+      a[rel~="external"]:after {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 12.2 12.2' width='14' height='14'%3E%3Cpath d='M5.7 0v1.5h4L4.5 6.7l1 1.1 5.3-5.2v3.9h1.4V0z'/%3E%3Cpath fill='none' d='M3.4 6.7l3-2.9H1.5v7h7V5.9l-3 2.9z'/%3E%3Cpath d='M8.5 5.9v4.9h-7v-7h4.9l1.5-1.6H0v10h10V4.4z'/%3E%3C/svg%3E");
+        margin-left: 0.2rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        a[rel~="external"]:after {
+          filter: invert(100%);
+        }
+      }
+
+      h1 {
+        display: inline;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      ul {
+        padding-left: 1.25rem;
+      }
+
+      li {
+        margin-bottom: 0.4rem;
+      }
+
+      footer p:last-of-type {
+        margin-bottom: 0;
+      }
+
       .headline {
         display: flex;
         justify-content: space-between;
@@ -51,6 +163,9 @@
       @media print {
         body {
           font-size: 10.5pt;
+          color: black;
+          padding: 0;
+          margin: 0;
         }
 
         header {
@@ -59,6 +174,10 @@
 
         section {
           margin-bottom: 10px;
+        }
+
+        .screen-only {
+          display: none;
         }
 
         .headline {
@@ -107,13 +226,6 @@
         <a href="mailto:hello@kerrisharp.com">hello@kerrisharp.com</a>
       </p>
     </header>
-
-    <nav class="screen-only">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/cv">CV</a></li>
-      </ul>
-    </nav>
 
     <main>
       <section>
